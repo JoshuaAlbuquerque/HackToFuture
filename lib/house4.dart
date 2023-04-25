@@ -214,8 +214,7 @@ class House4 extends StatelessWidget {
                                           height: 300,
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: AssetImage(
-                                                  "assets/room-down.png"),
+                                              image: AssetImage("assets/room-down.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -228,22 +227,19 @@ class House4 extends StatelessWidget {
                                                 // Show a dropdown menu
                                                 showMenu(
                                                   context: context,
-                                                  position: const RelativeRect
-                                                      .fromLTRB(0, 0, 0, 20),
+                                                  position: const RelativeRect.fromLTRB(0, 0, 0, 20),
                                                   items: [
                                                     const PopupMenuItem(
                                                       value: 1,
                                                       child: Text('TURN OFF'),
                                                     ),
-                                                    const PopupMenuItem(
+                                                    PopupMenuItem(
                                                       value: 2,
-                                                      child: Text(
-                                                          'Power usage - {num}'),
+                                                      child: Text('Power usage : $num Watts'),
                                                     ),
-                                                    const PopupMenuItem(
+                                                    PopupMenuItem(
                                                       value: 3,
-                                                      child: Text(
-                                                          'Uptime - {num}'),
+                                                      child: Text('Uptime - $time Hours'),
                                                     ),
                                                   ],
                                                 );
@@ -252,10 +248,77 @@ class House4 extends StatelessWidget {
                                                 primary: Colors.transparent,
                                                 shape: const CircleBorder(),
                                               ),
-                                              child: const Text(
-                                                '',
-                                              ),
+                                              child: const Text(''),
                                             ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.person),
+                                              ),
+                                              SizedBox(width: 80),
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.search),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
@@ -351,8 +414,7 @@ class House4 extends StatelessWidget {
                                           height: 300,
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: AssetImage(
-                                                  "assets/room-up.png"),
+                                              image: AssetImage("assets/room-up.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -365,22 +427,19 @@ class House4 extends StatelessWidget {
                                                 // Show a dropdown menu
                                                 showMenu(
                                                   context: context,
-                                                  position: const RelativeRect
-                                                      .fromLTRB(0, 0, 0, 20),
+                                                  position: const RelativeRect.fromLTRB(0, 0, 0, 20),
                                                   items: [
                                                     const PopupMenuItem(
                                                       value: 1,
                                                       child: Text('TURN OFF'),
                                                     ),
-                                                    const PopupMenuItem(
+                                                    PopupMenuItem(
                                                       value: 2,
-                                                      child: Text(
-                                                          'Power usage - {num}'),
+                                                      child: Text('Power usage : $num Watts'),
                                                     ),
-                                                    const PopupMenuItem(
+                                                    PopupMenuItem(
                                                       value: 3,
-                                                      child: Text(
-                                                          'Uptime - {num}'),
+                                                      child: Text('Uptime - $time Hours'),
                                                     ),
                                                   ],
                                                 );
@@ -389,10 +448,77 @@ class House4 extends StatelessWidget {
                                                 primary: Colors.transparent,
                                                 shape: const CircleBorder(),
                                               ),
-                                              child: const Text(
-                                                '',
-                                              ),
+                                              child: const Text(''),
                                             ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.person),
+                                              ),
+                                              SizedBox(width: 80),
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.search),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
@@ -449,8 +575,7 @@ class House4 extends StatelessWidget {
                                           height: 300,
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: AssetImage(
-                                                  "assets/room-up.png"),
+                                              image: AssetImage("assets/room-up.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -463,22 +588,19 @@ class House4 extends StatelessWidget {
                                                 // Show a dropdown menu
                                                 showMenu(
                                                   context: context,
-                                                  position: const RelativeRect
-                                                      .fromLTRB(0, 0, 0, 20),
+                                                  position: const RelativeRect.fromLTRB(0, 0, 0, 20),
                                                   items: [
                                                     const PopupMenuItem(
                                                       value: 1,
-                                                      child: Text('TURN ON'),
+                                                      child: Text('TURN OFF'),
                                                     ),
-                                                    const PopupMenuItem(
+                                                    PopupMenuItem(
                                                       value: 2,
-                                                      child: Text(
-                                                          'Power usage - 0'),
+                                                      child: Text('Power usage : $num Watts'),
                                                     ),
-                                                    const PopupMenuItem(
+                                                    PopupMenuItem(
                                                       value: 3,
-                                                      child: Text(
-                                                          'Uptime - NULL'),
+                                                      child: Text('Uptime - $time Hours'),
                                                     ),
                                                   ],
                                                 );
@@ -487,10 +609,77 @@ class House4 extends StatelessWidget {
                                                 primary: Colors.transparent,
                                                 shape: const CircleBorder(),
                                               ),
-                                              child: const Text(
-                                                '',
-                                              ),
+                                              child: const Text(''),
                                             ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.person),
+                                              ),
+                                              SizedBox(width: 80),
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.search),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
