@@ -5,6 +5,7 @@
   import 'house1.dart';
   import 'house2-floor1.dart';
   import 'house4.dart';
+  import 'house3.dart';
   
   void main() {
     runApp(const MaterialApp(
@@ -93,7 +94,7 @@
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const Profile()),
+                                    MaterialPageRoute(builder: (context) => const House1()),
                                   );
                                 },
                                 child: Stack(
@@ -172,7 +173,7 @@
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House2_floor1()),
+                                    MaterialPageRoute(builder: (context) => const House3()),
                                   );
                                 },
                                 child: Stack(
