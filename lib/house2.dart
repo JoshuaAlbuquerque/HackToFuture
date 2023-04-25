@@ -23,52 +23,76 @@ class House2 extends StatelessWidget {
           backgroundColor: const Color(0xFF3C096C),
         ),
 
-        body:Builder(builder: (context) {
+        body: Builder(builder: (context) {
           return Center(
             child: Padding(
               padding: const EdgeInsets.all(0),
-              child: Row(
+              child: Column(
                 children: [
-                  Expanded(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            // Handle the click on the first image
-                          },
-                          child: Image.asset('assets/room-down.png'),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            // Handle the click on the second image
-                          },
-                          child: Image.asset('assets/room-up.png'),
-                        ),
-                      ],
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle the click on the button
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(0xFF3C096C), // Change the color here
+                      onPrimary: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                      textStyle: const TextStyle(
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    child: const Text(
+                      'Select Floor',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                // Handle the click on the first image
+                              },
+                              child: Image.asset('assets/room-down.png'),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                // Handle the click on the second image
+                              },
+                              child: Image.asset('assets/room-up.png'),
+                            ),
+                          ],
+                        ),
+                      ),
 
-                  Expanded(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            // Handle the click on the first image
-                          },
-                          child: Image.asset('assets/long-room-left.png'),
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                // Handle the click on the first image
+                              },
+                              child: Image.asset('assets/long-room-left.png'),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                // Handle the click on the second image
+                              },
+                              child: Image.asset('assets/room-left.png'),
+                            ),
+                          ],
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            // Handle the click on the second image
-                          },
-                          child: Image.asset('assets/room-left.png'),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),
