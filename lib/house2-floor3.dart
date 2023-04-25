@@ -1,252 +1,627 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_button/flutter_grid_button.dart';
-import 'package:css_colors/css_colors.dart';
-import 'package:hackathon/house2-floor1.dart';
-import 'profile.dart';
+import 'dart:math';
+import 'house2-floor1.dart';
 import 'house2-floor2.dart';
-import 'house4.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: Home(),
-  ),
-  );
-}
+final random = Random();
+final num = random.nextInt(9) + 13;
+final time = random.nextInt(5) + 20;
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class House2_floor3 extends StatelessWidget {
+  const House2_floor3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/1.png'),
-          fit: BoxFit.fill,
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor:Colors.transparent,
+    return MaterialApp(
+      home: Scaffold(
 
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'EcoVision',
+            'Venice House',
             style: TextStyle(
               fontSize: 25.0,
               color: Colors.white,
               fontFamily: 'Cabin',
             ),
           ),
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.person),
-              tooltip: "Save Todo and Return to List",
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Profile()),
-                );
-              },
-            ),
-          ],
-          backgroundColor: CSSColors.forestGreen,
+          backgroundColor: const Color(0xFF5e60ce),
         ),
 
-
         body: Builder(builder: (context) {
-          return SingleChildScrollView(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: SizedBox(
-                  width: 500,
-                  height: 500,
-                  child: SizedBox(
-                    width: 500,
-                    height: 500,
+          return Center(
+            child: Padding(
+              padding: const EdgeInsets.all(0),
+              child: Column(
+                children: [
 
-                    child: Material(
-                      color: Colors.transparent,
-                      child: GridButton(
-                        borderWidth: 25,
-                        onPressed: (dynamic val) {},
+                  ElevatedButton(
+                    onPressed: () {
+                      showMenu(
+                        context: context,
+                        position: const RelativeRect.fromLTRB(140, 165, 140, 140),
                         items: [
-                          const [
-                            GridButtonItem(
-                              child: Text(
-                                '',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                          PopupMenuItem(
+                            value: 1,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const House2_floor1()),
+                                );
+                              },
+                              child: const Text('1st Floor'),
                             ),
-                          ],
+                          ),
 
-                          [
-                            GridButtonItem(
-                              title: "Red",
-                              color: Colors.red.withOpacity(0.8 ),
-                              borderRadius: const Radius.circular(25).x,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const Profile()),
-                                  );
-                                },
-                                child: Stack(
-                                  children: [
-                                    Image.asset(
-                                      'assets/house.png',
-                                      fit: BoxFit.cover,
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      right: 50,
-                                      bottom: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(vertical: 8),
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          'test',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                          PopupMenuItem(
+                            value: 1,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const House2_floor2()),
+                                );
+                              },
+                              child: const Text('2nd Floor'),
                             ),
+                          ),
 
-                            GridButtonItem(
-                              title: "Blue",
-                              color: Colors.blue.withOpacity(0.8),
-                              borderRadius: const Radius.circular(25).x,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House2_floor1()),
-                                  );
-                                },
-                                child: Stack(
-                                  children: [
-                                    Image.asset(
-                                      'assets/arrow.png',
-                                      fit: BoxFit.cover,
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      right: 50,
-                                      bottom: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(vertical: 8),
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          'test',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-
-                          ],
-
-                          [
-                            GridButtonItem(
-                              title: "Green",
-                              color: Colors.green.withOpacity(0.8),
-                              borderRadius: const Radius.circular(25).x,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House2_floor2()),
-                                  );
-                                },
-                                child: Stack(
-                                  children: [
-                                    Image.asset(
-                                      'assets/arrow.png',
-                                      fit: BoxFit.cover,
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      right: 50,
-                                      bottom: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(vertical: 8),
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          'test',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-
-                            GridButtonItem(
-                              title: "Yellow",
-                              color: Colors.yellow.withOpacity(0.8),
-                              borderRadius: const Radius.circular(25).x,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House4()),
-                                  );
-                                },
-                                child: Stack(
-                                  children: [
-                                    Image.asset(
-                                      'assets/arrow.png',
-                                      fit: BoxFit.cover,
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      right: 50,
-                                      bottom: 0,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(vertical: 8),
-                                        alignment: Alignment.center,
-                                        child: const Text(
-                                          'test',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-
-                          ],
+                          const PopupMenuItem(
+                            value: 3,
+                            child: Text('Current'),
+                          ),
                         ],
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(0xFF5e60ce),
+                      onPrimary: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                      textStyle: const TextStyle(
+                        fontSize: 18.0,
                       ),
                     ),
+                    child: const Text(
+                      '2nd Floor',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),//floor select
+
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => Dialog(
+                                    backgroundColor: Colors.transparent,
+                                    child: Stack(
+                                      children: [
+                                        Container(
+                                          height: 300,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage("assets/room-down.png"),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned.fill(
+                                          child: Align(
+                                            alignment: Alignment.center,
+                                            child: ElevatedButton(
+                                              onPressed: () {
+                                                // Show a dropdown menu
+                                                showMenu(
+                                                  context: context,
+                                                  position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                  items: [
+                                                    const PopupMenuItem(
+                                                      value: 1,
+                                                      child: Text('TURN OFF'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 2,
+                                                      child: Text('Power usage : $num Watts'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 3,
+                                                      child: Text('Uptime - $time Hours'),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Colors.transparent,
+                                                shape: const CircleBorder(),
+                                              ),
+                                              child: const Text(''),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.person),
+                                              ),
+                                              const SizedBox(width: 80),
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.search),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Image.asset('assets/room-down.png'),
+                            ),  //room1
+
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => Dialog(
+                                    backgroundColor: Colors.transparent,
+                                    child: Stack(
+                                      children: [
+                                        Container(
+                                          height: 500,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage("assets/long-room-right.png"),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned.fill(
+                                          child: Align(
+                                            alignment: Alignment.center,
+                                            child: ElevatedButton(
+                                              onPressed: () {
+                                                // Show a dropdown menu
+                                                showMenu(
+                                                  context: context,
+                                                  position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                  items: [
+                                                    const PopupMenuItem(
+                                                      value: 1,
+                                                      child: Text('TURN OFF'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 2,
+                                                      child: Text('Power usage : $num Watts'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 3,
+                                                      child: Text('Uptime - $time Hours'),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Colors.transparent,
+                                                shape: const CircleBorder(),
+                                              ),
+                                              child: const Text(''),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          right: 0,
+                                          bottom: 20,
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.person),
+                                              ),
+
+                                              const SizedBox(height: 340),
+
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.search),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Image.asset('assets/long-room-right.png'),
+                            ),  //room3
+                          ],
+                        ),
+                      ),
+
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => Dialog(
+                                    backgroundColor: Colors.transparent,
+                                    child: Stack(
+                                      children: [
+                                        Container(
+                                          height: 500,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage("assets/long-room-left.png"),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned.fill(
+                                          child: Align(
+                                            alignment: Alignment.center,
+                                            child: ElevatedButton(
+                                              onPressed: () {
+                                                // Show a dropdown menu
+                                                showMenu(
+                                                  context: context,
+                                                  position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                  items: [
+                                                    const PopupMenuItem(
+                                                      value: 1,
+                                                      child: Text('TURN OFF'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 2,
+                                                      child: Text('Power usage : $num Watts'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 3,
+                                                      child: Text('Uptime - $time Hours'),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Colors.transparent,
+                                                shape: const CircleBorder(),
+                                              ),
+                                              child: const Text(''),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          bottom: 20,
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.person),
+                                              ),
+
+                                              const SizedBox(height: 340),
+
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.search),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Image.asset('assets/long-room-left.png'),
+                            ),  //room2
+
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => Dialog(
+                                    backgroundColor: Colors.transparent,
+                                    child: Stack(
+                                      children: [
+                                        Container(
+                                          height: 300,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage("assets/room-left.png"),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned.fill(
+                                          child: Align(
+                                            alignment: Alignment.center,
+                                            child: ElevatedButton(
+                                              onPressed: () {
+                                                // Show a dropdown menu
+                                                showMenu(
+                                                  context: context,
+                                                  position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                  items: [
+                                                    const PopupMenuItem(
+                                                      value: 1,
+                                                      child: Text('TURN OFF'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 2,
+                                                      child: Text('Power usage : $num Watts'),
+                                                    ),
+                                                    PopupMenuItem(
+                                                      value: 3,
+                                                      child: Text('Uptime - $time Hours'),
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                primary: Colors.transparent,
+                                                shape: const CircleBorder(),
+                                              ),
+                                              child: const Text(''),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          bottom: 20,
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.person),
+                                              ),
+
+                                              const SizedBox(height: 160),
+
+                                              ElevatedButton(
+                                                onPressed: () {
+                                                  showMenu(
+                                                    context: context,
+                                                    position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                    items: [
+                                                      const PopupMenuItem(
+                                                        value: 1,
+                                                        child: Text('TURN OFF'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 2,
+                                                        child: Text('Power usage : $num Watts'),
+                                                      ),
+                                                      PopupMenuItem(
+                                                        value: 3,
+                                                        child: Text('Uptime - $time Hours'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  primary: Colors.grey[300],
+                                                  shape: const CircleBorder(),
+                                                  padding: const EdgeInsets.all(8),
+                                                  minimumSize: const Size(50, 50),
+                                                ),
+                                                child: const Icon(Icons.search),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Image.asset('assets/room-left.png'),
+                            ),  //room4
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ),
+                ],
               ),
             ),
           );

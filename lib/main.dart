@@ -1,9 +1,9 @@
   import 'package:flutter/material.dart';
   import 'package:flutter_grid_button/flutter_grid_button.dart';
-  import 'package:css_colors/css_colors.dart';
   import 'package:hackathon/house2-floor1.dart';
   import 'profile.dart';
-  import 'house2-floor2.dart';
+  import 'house1.dart';
+  import 'house2-floor1.dart';
   import 'house4.dart';
   import 'house3.dart';
   
@@ -51,7 +51,7 @@
                 },
               ),
             ],
-            backgroundColor: CSSColors.forestGreen,
+            backgroundColor: const Color(0xFF72efdd),
           ),
   
   
