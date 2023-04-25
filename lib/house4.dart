@@ -127,35 +127,7 @@ class House4 extends StatelessWidget {
                                             ),
                                             child: const Icon(Icons.person),
                                           ),
-                                          ElevatedButton(
-                                            onPressed: () {
-                                              showMenu(
-                                                context: context,
-                                                position: const RelativeRect.fromLTRB(0, 0, 0, 20),
-                                                items: [
-                                                  const PopupMenuItem(
-                                                    value: 1,
-                                                    child: Text('TURN OFF'),
-                                                  ),
-                                                  PopupMenuItem(
-                                                    value: 2,
-                                                    child: Text('Power usage : $num Watts'),
-                                                  ),
-                                                  PopupMenuItem(
-                                                    value: 3,
-                                                    child: Text('Uptime - $time Hours'),
-                                                  ),
-                                                ],
-                                              );
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              primary: Colors.grey[300],
-                                              shape: const CircleBorder(),
-                                              padding: const EdgeInsets.all(8),
-                                              minimumSize: const Size(50, 50),
-                                            ),
-                                            child: const Icon(Icons.settings),
-                                          ),
+                                          SizedBox(width: 80),
                                           ElevatedButton(
                                             onPressed: () {
                                               showMenu(
