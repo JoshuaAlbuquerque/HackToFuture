@@ -38,17 +38,17 @@ class House2 extends StatelessWidget {
                     onPressed: () {
                       showMenu(
                         context: context,
-                        position: RelativeRect.fromLTRB(140, 165, 140, 140),
+                        position: const RelativeRect.fromLTRB(140, 165, 140, 140),
                         items: [
                           const PopupMenuItem(
                             value: 1,
                             child: Text('FLOOR 1'),
                           ),
-                          PopupMenuItem(
+                          const PopupMenuItem(
                             value: 2,
                             child: Text('FLOOR 2'),
                           ),
-                          PopupMenuItem(
+                          const PopupMenuItem(
                             value: 3,
                             child: Text('FLOOR 3'),
                           ),
@@ -70,11 +70,8 @@ class House2 extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-<<<<<<< Updated upstream
                   ),
-=======
-                  ), //floor select
->>>>>>> Stashed changes
+                   //floor select
 
                   Row(
                     children: [
