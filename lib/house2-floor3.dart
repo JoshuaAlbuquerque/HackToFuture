@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import  'package:flutter/material.dart';
 import 'dart:math';
 import 'house2-floor1.dart';
 import 'house2-floor2.dart';
@@ -182,7 +182,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.person),
+                                                child: const Icon(Icons.outlet),
                                               ),
                                               const SizedBox(width: 80),
                                               ElevatedButton(
@@ -212,7 +212,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.search),
+                                                child: const Icon(Icons.lightbulb_rounded),
                                               ),
                                             ],
                                           ),
@@ -308,7 +308,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.person),
+                                                child: const Icon(Icons.outlet),
                                               ),
 
                                               const SizedBox(height: 340),
@@ -340,7 +340,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.search),
+                                                child: const Icon(Icons.lightbulb_rounded),
                                               ),
                                             ],
                                           ),
@@ -444,7 +444,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.person),
+                                                child: const Icon(Icons.outlet),
                                               ),
 
                                               const SizedBox(height: 340),
@@ -476,7 +476,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.search),
+                                                child: const Icon(Icons.lightbulb_rounded),
                                               ),
                                             ],
                                           ),
@@ -572,7 +572,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.person),
+                                                child: const Icon(Icons.outlet),
                                               ),
 
                                               const SizedBox(height: 160),
@@ -604,7 +604,7 @@ class House2_floor3 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.search),
+                                                child: const Icon(Icons.lightbulb_rounded),
                                               ),
                                             ],
                                           ),

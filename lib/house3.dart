@@ -28,16 +28,178 @@ class House3 extends StatelessWidget {
         ),
 
         body: Builder(builder: (context) {
-          return Center(
+          return SingleChildScrollView(
+              child: Center(
             child: Padding(
               padding: const EdgeInsets.all(0),
               child: SizedBox(
                 width: 400, // set the desired width of the GridButton
-                height: 500,
+                height: 2000,
                 child: GridButton(
                   borderColor: Colors.lightBlue[50],
                   onPressed: (dynamic val) {},
                   items: [
+                    [
+                      GridButtonItem(
+                        title: "Los Angeles House",
+                        child: GestureDetector(
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => Dialog(
+                                backgroundColor: Colors.transparent,
+                                child: Stack(
+                                  children: [
+                                    Container(
+                                      height: 300,
+                                      decoration: const BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage("assets/refri.png"),
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                    Positioned.fill(
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: ElevatedButton(
+                                          onPressed: () {
+                                            // Show a dropdown menu
+                                            showMenu(
+                                              context: context,
+                                              position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                              items: [
+                                                const PopupMenuItem(
+                                                  value: 1,
+                                                  child: Text('TURN OFF'),
+                                                ),
+                                                  PopupMenuItem(
+                                                  value: 2,
+                                                  child: Text('Power usage : $num Watts'),
+                                                ),
+                                                PopupMenuItem(
+                                                  value: 3,
+                                                  child: Text('Uptime - $time Hours'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            primary: Colors.transparent,
+                                            shape: const CircleBorder(),
+                                          ),
+                                          child: const Text(''),
+                                        ),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      left: 0,
+                                      right: 0,
+                                      bottom: 0,
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          ElevatedButton(
+                                            onPressed: () {
+                                              showMenu(
+                                                context: context,
+                                                position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                items: [
+                                                  const PopupMenuItem(
+                                                    value: 1,
+                                                    child: Text('TURN OFF'),
+                                                  ),
+                                                  PopupMenuItem(
+                                                    value: 2,
+                                                    child: Text('Power usage : $num Watts'),
+                                                  ),
+                                                  PopupMenuItem(
+                                                    value: 3,
+                                                    child: Text('Uptime - $time Hours'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                            style: ElevatedButton.styleFrom(
+                                              primary: Colors.grey[300],
+                                              shape: const CircleBorder(),
+                                              padding: const EdgeInsets.all(8),
+                                              minimumSize: const Size(50, 50),
+                                            ),
+                                            child: const Icon(Icons.outlet),
+                                          ),
+                                          SizedBox(width: 80),
+                                          ElevatedButton(
+                                            onPressed: () {
+                                              showMenu(
+                                                context: context,
+                                                position: const RelativeRect.fromLTRB(0, 0, 0, 20),
+                                                items: [
+                                                  const PopupMenuItem(
+                                                    value: 1,
+                                                    child: Text('TURN OFF'),
+                                                  ),
+                                                  PopupMenuItem(
+                                                    value: 2,
+                                                    child: Text('Power usage : $num Watts'),
+                                                  ),
+                                                  PopupMenuItem(
+                                                    value: 3,
+                                                    child: Text('Uptime - $time Hours'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                            style: ElevatedButton.styleFrom(
+                                              primary: Colors.grey[300],
+                                              shape: const CircleBorder(),
+                                              padding: const EdgeInsets.all(8),
+                                              minimumSize: const Size(50, 50),
+                                            ),
+                                            child: const Icon(Icons.lightbulb_rounded),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: 500,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage("assets/refri.png"),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  left: 0,
+                                  right: 50,
+                                  bottom: 0,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 8),
+                                    alignment: Alignment.center,
+                                    child: const Text(
+                                      '',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                     [
                       GridButtonItem(
                         title: "Los Angeles House",
@@ -125,14 +287,7 @@ class House3 extends StatelessWidget {
                                               padding: const EdgeInsets.all(8),
                                               minimumSize: const Size(50, 50),
                                             ),
-                                            child: Container(
-                                            decoration: const BoxDecoration(
-                                              image: DecorationImage(
-                                                image: AssetImage("assets/turn-on.png"),
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                          ),
+                                            child: const Icon(Icons.outlet),
                                           ),
                                           SizedBox(width: 80),
                                           ElevatedButton(
@@ -162,14 +317,7 @@ class House3 extends StatelessWidget {
                                               padding: const EdgeInsets.all(8),
                                               minimumSize: const Size(50, 50),
                                             ),
-                                            child: Container(
-                                              decoration: const BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage("assets/turn-on.png"),
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                            ),
+                                            child: const Icon(Icons.lightbulb_rounded),
                                           ),
                                         ],
                                       ),
@@ -212,11 +360,13 @@ class House3 extends StatelessWidget {
                           ),
                         ),
                       ),
+
                     ],
                   ],
                 ),
               ),
             ),
+          )
           );
         }),
       ),
