@@ -35,7 +35,7 @@ class Profile extends StatelessWidget {
                   radius: 50.0,
                   child: ClipOval(
                     child: Image.asset(
-                      'assets/profile pic.jpg',
+                      'assets/profile.jpg',
                       fit: BoxFit.cover,
                       width: 100.0,
                       height: 100.0,

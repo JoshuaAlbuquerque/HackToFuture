@@ -55,8 +55,18 @@ class House2 extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Image.asset('assets/room-down.png'),
-                        Image.asset('assets/room-up.png'),
+                        GestureDetector(
+                          onTap: () {
+                            // Handle the click on the first image
+                          },
+                          child: Image.asset('assets/long-room-left.png'),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            // Handle the click on the second image
+                          },
+                          child: Image.asset('assets/room-left.png'),
+                        ),
                       ],
                     ),
                   ),
