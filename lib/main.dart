@@ -5,45 +5,52 @@ import 'profile.dart';
 import 'house2.dart';
 import 'house4.dart';
 
- void main() {
-   runApp(const MaterialApp(
-     home: Home(),
-   ),
-   );
- }
+void main() {
+  runApp(const MaterialApp(
+    home: Home(),
+  ),
+  );
+}
 
-  class Home extends StatelessWidget {
-    const Home({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/1.png'),
+          fit: BoxFit.fill,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor:Colors.transparent,
         appBar: AppBar(
-            centerTitle: true,
-            title: const Text(
-              'EcoVision',
-              style: TextStyle(
-                fontSize: 25.0,
-                color: Colors.white,
-                fontFamily: 'Cabin',
-              ),
+          centerTitle: true,
+          title: const Text(
+            'EcoVision',
+            style: TextStyle(
+              fontSize: 25.0,
+              color: Colors.white,
+              fontFamily: 'Cabin',
             ),
+          ),
           actions: <Widget>[
             IconButton(
               icon: const Icon(Icons.person),
               tooltip: "Save Todo and Return to List",
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Profile()),
+                  context,
+                  MaterialPageRoute(builder: (context) => const Profile()),
                 );
               },
             ),
           ],
 
           backgroundColor: CSSColors.forestGreen,
-      ),
+        ),
 
 
         body: Builder(builder: (context) {
@@ -51,32 +58,31 @@ import 'house4.dart';
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
+                child: SizedBox(
+                  width: 500,
+                  height: 500,
                   child: SizedBox(
                     width: 500,
                     height: 500,
-                    child: SizedBox(
-                      width: 500,
-                      height: 500,
 
                     child: GridButton(
-                      borderColor: Colors.lightBlue[50],
                       borderWidth: 25,
                       onPressed: (dynamic val) {},
                       items: [
                         const [
                           GridButtonItem(
-                              child: Text(
-                                'test',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                            child: Text(
+                              'test',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ],
+                          ),
+                        ],
 
-                          [
+                        [
                           GridButtonItem(
                             title: "Red",
                             color: Colors.red.withOpacity(0.8),
@@ -235,14 +241,13 @@ import 'house4.dart';
                         ],
                       ],
                     ),
-          ),
-          ),
-          ),
-          ),
+                  ),
+                ),
+              ),
+            ),
           );
         }),
-
-        backgroundColor: Colors.lightBlue[50],
-      );
-    }
+      ),
+    );
   }
+}
