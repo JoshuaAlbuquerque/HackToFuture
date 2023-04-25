@@ -97,6 +97,9 @@ class House2_floor1 extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
+
+
+
                             GestureDetector(
                               onTap: () {
                                 showDialog(
@@ -223,6 +226,8 @@ class House2_floor1 extends StatelessWidget {
                               },
                               child: Image.asset('assets/room-down.png'),
                             ),  //room1
+
+
 
                             GestureDetector(
                               onTap: () {
@@ -360,6 +365,9 @@ class House2_floor1 extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
+
+
+
                             GestureDetector(
                               onTap: () {
                                 showDialog(
@@ -487,6 +495,9 @@ class House2_floor1 extends StatelessWidget {
                               },
                               child: Image.asset('assets/long-room-left.png'),
                             ),  //room2
+
+
+
 
                             GestureDetector(
                               onTap: () {
