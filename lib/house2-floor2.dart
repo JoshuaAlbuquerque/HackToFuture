@@ -79,8 +79,7 @@ class House2_floor2 extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                  ),
-                   //floor select
+                  ),//floor select
 
                   Row(
                     children: [
