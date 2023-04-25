@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:css_colors/css_colors.dart';
 import 'dart:math';
+import 'house2-floor1.dart';
 
 final random = Random();
 final num = random.nextInt(9) + 13;
@@ -40,13 +40,22 @@ class House2_floor2 extends StatelessWidget {
                         context: context,
                         position: const RelativeRect.fromLTRB(140, 165, 140, 140),
                         items: [
-                          const PopupMenuItem(
+                          PopupMenuItem(
                             value: 1,
-                            child: Text('1st Floor'),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const House2_floor1()),
+                                );
+                              },
+                              child: const Text('1st Floor'),
+                            ),
                           ),
+
                           const PopupMenuItem(
                             value: 2,
-                            child: Text('2nd Floor'),
+                            child: Text('Current'),
                           ),
                           const PopupMenuItem(
                             value: 3,

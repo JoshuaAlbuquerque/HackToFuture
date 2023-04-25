@@ -1,6 +1,7 @@
   import 'package:flutter/material.dart';
   import 'package:flutter_grid_button/flutter_grid_button.dart';
   import 'package:css_colors/css_colors.dart';
+import 'package:hackathon/house2-floor1.dart';
   import 'profile.dart';
   import 'house2-floor2.dart';
   import 'house4.dart';
@@ -26,6 +27,7 @@
         ),
         child: Scaffold(
           backgroundColor:Colors.transparent,
+
           appBar: AppBar(
             centerTitle: true,
             title: const Text(
@@ -48,7 +50,6 @@
                 },
               ),
             ],
-  
             backgroundColor: CSSColors.forestGreen,
           ),
   
@@ -130,8 +131,7 @@
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House2_floor2(),
-                                    ),
+                                    MaterialPageRoute(builder: (context) => const House2_floor1()),
                                   );
                                 },
                                 child: Stack(
