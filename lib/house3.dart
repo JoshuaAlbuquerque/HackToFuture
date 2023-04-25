@@ -125,7 +125,14 @@ class House3 extends StatelessWidget {
                                               padding: const EdgeInsets.all(8),
                                               minimumSize: const Size(50, 50),
                                             ),
-                                            child: const Icon(Icons.person),
+                                            child: Container(
+                                            decoration: const BoxDecoration(
+                                              image: DecorationImage(
+                                                image: AssetImage("assets/turn-on.png"),
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                          ),
                                           ),
                                           SizedBox(width: 80),
                                           ElevatedButton(
@@ -155,7 +162,14 @@ class House3 extends StatelessWidget {
                                               padding: const EdgeInsets.all(8),
                                               minimumSize: const Size(50, 50),
                                             ),
-                                            child: const Icon(Icons.search),
+                                            child: Container(
+                                              decoration: const BoxDecoration(
+                                                image: DecorationImage(
+                                                  image: AssetImage("assets/turn-on.png"),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ),
                                           ),
                                         ],
                                       ),
