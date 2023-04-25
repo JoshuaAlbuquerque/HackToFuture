@@ -138,7 +138,7 @@
                                 child: Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/arrow.png',
+                                      'assets/house.png',
                                       fit: BoxFit.cover,
                                     ),
                                     Positioned(
@@ -179,7 +179,7 @@
                                 child: Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/arrow.png',
+                                      'assets/house.png',
                                       fit: BoxFit.cover,
                                     ),
                                     Positioned(
@@ -217,7 +217,7 @@
                                 child: Stack(
                                   children: [
                                     Image.asset(
-                                      'assets/arrow.png',
+                                      'assets/house.png',
                                       fit: BoxFit.cover,
                                     ),
                                     Positioned(
