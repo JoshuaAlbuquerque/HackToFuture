@@ -51,7 +51,7 @@
                 },
               ),
             ],
-            backgroundColor: const Color(0xFF72efdd),
+            backgroundColor: const Color(0xFFabff4f),
           ),
   
   
@@ -94,7 +94,7 @@
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House1()),
+                                    MaterialPageRoute(builder: (context) => const Profile()),
                                   );
                                 },
                                 child: Stack(

@@ -83,7 +83,7 @@ class House2_floor3 extends StatelessWidget {
                       ),
                     ),
                     child: const Text(
-                      '2nd Floor',
+                      '3rd Floor',
                       style: TextStyle(
                         fontSize: 18.0,
                         color: Colors.white,
