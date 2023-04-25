@@ -166,7 +166,7 @@ class House3 extends StatelessWidget {
                             );
                           },
                           child: Container(
-                            height: 300,
+                            height: 500,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage("assets/refri.png"),
@@ -184,7 +184,7 @@ class House3 extends StatelessWidget {
                                         vertical: 8),
                                     alignment: Alignment.center,
                                     child: const Text(
-                                      'test',
+                                      '',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 16,

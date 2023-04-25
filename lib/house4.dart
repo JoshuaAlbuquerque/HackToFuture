@@ -125,7 +125,7 @@ class House4 extends StatelessWidget {
                                               padding: const EdgeInsets.all(8),
                                               minimumSize: const Size(50, 50),
                                             ),
-                                            child: const Icon(Icons.person),
+                                            child: const Icon(Icons.lightbulb_rounded),
                                           ),
                                           SizedBox(width: 80),
                                           ElevatedButton(
@@ -286,7 +286,7 @@ class House4 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.person),
+                                                child: const Icon(Icons.lightbulb_rounded),
                                               ),
                                               SizedBox(width: 80),
                                               ElevatedButton(
@@ -486,7 +486,7 @@ class House4 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.person),
+                                                child: const Icon(Icons.lightbulb_rounded),
                                               ),
                                               SizedBox(width: 80),
                                               ElevatedButton(
@@ -647,7 +647,7 @@ class House4 extends StatelessWidget {
                                                   padding: const EdgeInsets.all(8),
                                                   minimumSize: const Size(50, 50),
                                                 ),
-                                                child: const Icon(Icons.person),
+                                                child: const Icon(Icons.lightbulb_rounded),
                                               ),
                                               SizedBox(width: 80),
                                               ElevatedButton(
