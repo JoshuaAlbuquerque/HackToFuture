@@ -6,8 +6,8 @@ final random = Random();
 final num = random.nextInt(9) + 13;
 final time = random.nextInt(5) + 20;
 
-class House2 extends StatelessWidget {
-  const House2({Key? key}) : super(key: key);
+class House2_floor2 extends StatelessWidget {
+  const House2_floor2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,15 +42,15 @@ class House2 extends StatelessWidget {
                         items: [
                           const PopupMenuItem(
                             value: 1,
-                            child: Text('FLOOR 1'),
+                            child: Text('1st Floor'),
                           ),
                           const PopupMenuItem(
                             value: 2,
-                            child: Text('FLOOR 2'),
+                            child: Text('2nd Floor'),
                           ),
                           const PopupMenuItem(
                             value: 3,
-                            child: Text('FLOOR 3'),
+                            child: Text('3rd Floor'),
                           ),
                         ],
                       );
@@ -64,7 +64,7 @@ class House2 extends StatelessWidget {
                       ),
                     ),
                     child: const Text(
-                      'Select Floor',
+                      '2nd Floor',
                       style: TextStyle(
                         fontSize: 18.0,
                         color: Colors.white,
