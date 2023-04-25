@@ -37,25 +37,25 @@ class House2 extends StatelessWidget {
                     onPressed: () {
                       showMenu(
                         context: context,
-                        position: const RelativeRect.fromLTRB(0, 0, 0, 0),
+                        position: RelativeRect.fromLTRB(140, 165, 140, 140),
                         items: [
                           const PopupMenuItem(
                             value: 1,
-                            child: Text('TURN OFF'),
+                            child: Text('FLOOR 1'),
                           ),
                           PopupMenuItem(
                             value: 2,
-                            child: Text('Power usage : $num Watts'),
+                            child: Text('FLOOR 2'),
                           ),
                           PopupMenuItem(
                             value: 3,
-                            child: Text('Uptime - $time Hours'),
+                            child: Text('FLOOR 3'),
                           ),
                         ],
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFF5e60ce), // Change the color here
+                      primary: const Color(0xFF5e60ce),
                       onPrimary: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                       textStyle: const TextStyle(
@@ -70,6 +70,7 @@ class House2 extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   Row(
                     children: [
                       Expanded(
