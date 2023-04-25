@@ -35,7 +35,24 @@ class House2 extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Handle the click on the button
+                      showMenu(
+                        context: context,
+                        position: const RelativeRect.fromLTRB(0, 0, 0, 0),
+                        items: [
+                          const PopupMenuItem(
+                            value: 1,
+                            child: Text('TURN OFF'),
+                          ),
+                          PopupMenuItem(
+                            value: 2,
+                            child: Text('Power usage : $num Watts'),
+                          ),
+                          PopupMenuItem(
+                            value: 3,
+                            child: Text('Uptime - $time Hours'),
+                          ),
+                        ],
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: const Color(0xFF5e60ce), // Change the color here
@@ -259,10 +276,9 @@ class House2 extends StatelessWidget {
                                         ),
                                         Positioned(
                                           left: 0,
-                                          right: 0,
-                                          bottom: 0,
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          bottom: 20,
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.start,
                                             children: [
                                               ElevatedButton(
                                                 onPressed: () {
@@ -293,7 +309,7 @@ class House2 extends StatelessWidget {
                                                 ),
                                                 child: const Icon(Icons.person),
                                               ),
-                                              const SizedBox(width: 80),
+                                              const SizedBox(height: 160),
                                               ElevatedButton(
                                                 onPressed: () {
                                                   showMenu(
