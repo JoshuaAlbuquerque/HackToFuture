@@ -131,6 +131,7 @@
                                 onTap: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(builder: (context) => const House2_floor2(),
+                                    ),
                                   );
                                 },
                                 child: Stack(
@@ -171,7 +172,7 @@
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House2()),
+                                    MaterialPageRoute(builder: (context) => const House2_floor2()),
                                   );
                                 },
                                 child: Stack(
