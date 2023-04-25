@@ -38,13 +38,13 @@ class House2 extends StatelessWidget {
                           onTap: () {
                             // Handle the click on the first image
                           },
-                          child: Image.asset('assets/room2.png'),
+                          child: Image.asset('assets/room-down.png'),
                         ),
                         GestureDetector(
                           onTap: () {
                             // Handle the click on the second image
                           },
-                          child: Image.asset('assets/room1.png'),
+                          child: Image.asset('assets/room-up.png'),
                         ),
                       ],
                     ),
@@ -55,8 +55,8 @@ class House2 extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Image.asset('assets/room2.png'),
-                        Image.asset('assets/room1.png'),
+                        Image.asset('assets/room-down.png'),
+                        Image.asset('assets/room-up.png'),
                       ],
                     ),
                   ),

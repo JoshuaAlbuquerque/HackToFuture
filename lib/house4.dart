@@ -53,7 +53,7 @@ class House4 extends StatelessWidget {
                                       height: 300,
                                       decoration: const BoxDecoration(
                                         image: DecorationImage(
-                                          image: AssetImage("assets/room2.png"),
+                                          image: AssetImage("assets/room-down.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -197,7 +197,7 @@ class House4 extends StatelessWidget {
                             height: 300,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage("assets/room2.png"),
+                                image: AssetImage("assets/room-down.png"),
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -243,7 +243,7 @@ class House4 extends StatelessWidget {
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(
-                                                  "assets/room2.png"),
+                                                  "assets/room-down.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -295,7 +295,7 @@ class House4 extends StatelessWidget {
                             height: 300,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage("assets/room2.png"),
+                                image: AssetImage("assets/room-down.png"),
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -380,7 +380,7 @@ class House4 extends StatelessWidget {
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(
-                                                  "assets/room1.png"),
+                                                  "assets/room-up.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -432,7 +432,7 @@ class House4 extends StatelessWidget {
                             height: 300,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage("assets/room1.png"),
+                                image: AssetImage("assets/room-up.png"),
                                 fit: BoxFit.fill,
                               ),
                             ),
@@ -478,7 +478,7 @@ class House4 extends StatelessWidget {
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
                                               image: AssetImage(
-                                                  "assets/room1.png"),
+                                                  "assets/room-up.png"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -530,7 +530,7 @@ class House4 extends StatelessWidget {
                             height: 300,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage("assets/room1.png"),
+                                image: AssetImage("assets/room-up.png"),
                                 fit: BoxFit.fill,
                               ),
                             ),
