@@ -1,10 +1,11 @@
   import 'package:flutter/material.dart';
   import 'package:flutter_grid_button/flutter_grid_button.dart';
   import 'package:css_colors/css_colors.dart';
-import 'package:hackathon/house2-floor1.dart';
+  import 'package:hackathon/house2-floor1.dart';
   import 'profile.dart';
   import 'house2-floor2.dart';
   import 'house4.dart';
+  import 'house3.dart';
   
   void main() {
     runApp(const MaterialApp(
@@ -93,7 +94,7 @@ import 'package:hackathon/house2-floor1.dart';
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const Profile()),
+                                    MaterialPageRoute(builder: (context) => const House1()),
                                   );
                                 },
                                 child: Stack(
@@ -172,7 +173,7 @@ import 'package:hackathon/house2-floor1.dart';
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
-                                    MaterialPageRoute(builder: (context) => const House2_floor2()),
+                                    MaterialPageRoute(builder: (context) => const House3()),
                                   );
                                 },
                                 child: Stack(
