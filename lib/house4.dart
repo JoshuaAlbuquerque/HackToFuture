@@ -24,7 +24,7 @@ class House4 extends StatelessWidget {
               fontFamily: 'Cabin',
             ),
           ),
-          backgroundColor: const Color(0xFF3C096C),
+          backgroundColor: const Color(0xFF522882),
         ),
 
         body: Builder(builder: (context) {

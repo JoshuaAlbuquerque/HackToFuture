@@ -25,7 +25,7 @@ class House2_floor1 extends StatelessWidget {
               fontFamily: 'Cabin',
             ),
           ),
-        backgroundColor: const Color(0xFF5e60ce),
+        backgroundColor: const Color(0xFFf5bd1f),
       ),
 
         body: Builder(builder: (context) {
@@ -73,7 +73,7 @@ class House2_floor1 extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFF5e60ce),
+                      primary: const Color(0xFFf5bd1f),
                       onPrimary: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                       textStyle: const TextStyle(

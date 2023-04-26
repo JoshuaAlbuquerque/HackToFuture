@@ -89,7 +89,7 @@
                           [
                             GridButtonItem(
                               title: "Red",
-                              color: Colors.red.withOpacity(0.8 ),
+                              color: const Color(0xFFffd93d).withOpacity(0.8 ),
                               borderRadius: const Radius.circular(25).x,
                               child: GestureDetector(
                                 onTap: () {
@@ -127,7 +127,7 @@
   
                             GridButtonItem(
                               title: "Blue",
-                              color: Colors.blue.withOpacity(0.8),
+                              color: const Color(0xFFf5bd1f).withOpacity(0.8),
                               borderRadius: const Radius.circular(25).x,
                               child: GestureDetector(
                                 onTap: () {
@@ -168,7 +168,7 @@
                           [
                             GridButtonItem(
                               title: "Green",
-                              color: Colors.green.withOpacity(0.8),
+                              color: const Color(0xFF722e9a).withOpacity(0.8),
                               borderRadius: const Radius.circular(25).x,
                               child: GestureDetector(
                                 onTap: () {
@@ -206,7 +206,7 @@
   
                             GridButtonItem(
                               title: "Yellow",
-                              color: Colors.yellow.withOpacity(0.8),
+                              color: const Color(0xFF522882).withOpacity(0.8),
                               borderRadius: const Radius.circular(25).x,
                               child: GestureDetector(
                                 onTap: () {

@@ -22,7 +22,7 @@ class House1 extends StatelessWidget {
               fontFamily: 'Cabin',
             ),
           ),
-          backgroundColor: const Color(0xFF3C096C),
+          backgroundColor: const Color(0xFFffd93d),
         ),
         body: InteractiveViewer(
           boundaryMargin: const EdgeInsets.all(0),
